@@ -1,0 +1,29 @@
+ <nav class="nav-grey">
+ <div class="nav-wrapper">
+      <a href="/" class="brand-logo">System <i class="material-icons">cloud</i></a>
+      <a href="#" onclick="Materialize.showStaggeredList('#mobile-demo')" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+  <ul class="right hide-on-med-and-down">
+  <button onclick="Materialize.showStaggeredList('#slide-out')" data-activates="slide-out" class="btn-floating btn-large waves-effect waves-light grey button-collapse"><i class="material-icons">menu</i></button>
+        <ul id="slide-out" class="side-nav" style="background-color: lightgrey;">
+        <li style="background-color:grey;">
+          <div class="userView">
+            <img class="circle" src="images/nodejs-logo.png">
+            <span class="black-text name">HW Monitor</span>
+            <span class="black-text email">CPU, RAM &amp; Architecture</span>
+          </div>
+        </li>
+
+        <li style="background-color:white;"><a href="/"><i class="material-icons">cloud</i>Home</a></li>
+        <li><a href="/systems"><i class="material-icons">timeline</i>Show saved system</a></li>
+        <li style="background-color:white;"><a href="/settings"><i class="material-icons">settings</i>Settings</a></li>
+        <li><a href="/about"><i class="material-icons">feedback</i> About</a></li>
+      </ul>
+  </ul>
+   <ul class="side-nav" id="mobile-demo" style="background-color: lightgrey;">
+        <li><a href="/"><i class="material-icons">cloud</i>Home</a></li>
+        <li style="background-color:white;"><a href="/systems"><i class="material-icons">timeline</i>Show saved system</a></li>
+        <li><a href="/settings"><i class="material-icons">settings</i>Settings</a></li>
+        <li style="background-color:white;"><a href="/about"><i class="material-icons">feedback</i> About</a></li>
+   </ul>
+</div>
+  </nav>

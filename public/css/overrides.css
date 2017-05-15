@@ -1,0 +1,40 @@
+.nav-grey {
+	background-color:grey;
+}
+
+.grey-override {
+	background-color:grey;
+}
+
+.btn-grey {
+	background-color: grey;
+}
+
+.box {
+	padding:12px;
+	//margin-top:50px;
+}
+
+.menu {
+	position: relative;
+}
+
+button {
+	//padding-left:100px;
+	margin-left: 100px;
+}
+.right {
+	float:left !important;
+	padding-left: 150px !important;
+}
+
+.colnothing {
+	margin-left: auto;
+	left:auto;
+	right:auto;
+}
+
+.img-small {
+	width:50%;
+	height:50%;
+}

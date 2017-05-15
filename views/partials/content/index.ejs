@@ -1,0 +1,157 @@
+<script>
+
+var socket = io();
+
+socket.on('connect', function() {
+	console.log('connected?')
+
+	socket.on('new', function(data) {
+		//(data.free, data.used)
+		var f = document.getElementsByClassName("freememory");
+		var u = document.getElementsByClassName("usedmemory");
+		var s =  document.getElementsByClassName("speed");
+
+		for(var i = 0; i < f.length; i++) {
+			f[i].innerText = data.free
+			u[i].innerText = data.used
+			
+		}
+	})
+})
+
+</script>
+
+<div class="col s12 box">
+	<h3><i class="material-icons">dashboard</i> Dashboard</h3>
+
+	<div class="row">
+		<hr>
+	</div>
+
+	<div class="row">
+		<div class="colnothing blue-grey lighten-4">
+			<i class="material-icons">computer</i>
+		</div>
+
+		<div class="col s2" name="Uptime">
+			<%= Uptime %> Hours Uptime
+		</div>
+
+		<div class="col s2" name="hostname">
+			<%= HostName %>
+		</div>
+
+		<div class="col s2" name="ip">
+		<%= GetIP %>
+		</div>
+	</div>
+
+	<div class="row">
+		<hr>
+	</div>
+
+	<div class="row">
+		<div class="colnothing blue-grey lighten-4">
+			<i class="material-icons">assessment</i>
+		</div>
+
+		<div class="col s4" name="cpumodel">
+			<%= CpuModel %>
+		</div>
+
+		<div class="col s2" name="cores">
+			<%= TotalCPUCores %>
+		</div>
+
+		<div class="col s2" name="speed">
+		<span class="speed">
+			<%= CpuSpeed %>
+		</span>
+		</div>
+		<div class="col s2" name="arch">
+			<%= Arch %>
+		</div>
+	</div>
+
+	<div class="row">
+		<hr>
+	</div>
+
+
+	<div class="row">
+		<div class="colnothing blue-grey lighten-4">
+			<i class="material-icons">memory</i>
+		</div>
+
+		<div class="col s4" name="total">
+			<%= TotalMemory %> Mb - Total
+		</div>
+
+		<div class="col s2" name="free">
+		<span class="freememory">
+			<%= FreeMemory %>
+		</span>
+			 Mb - Free
+		</div>
+
+		<div id="memory" class="col s2" name="used">
+		<span class="usedmemory">
+			<%= UsedMemory %>
+		</span>
+			 Mb - Used
+		
+		</div>
+	</div>
+
+	<div class="row">
+		<hr>
+	</div>
+
+
+	<div class="row">
+		<div class="colnothing blue-grey lighten-4">
+			<i class="material-icons">fullscreen</i>
+		</div>
+
+		<div class="col s4" name="platform">
+			<%= Platform %>
+		</div>
+
+		<div class="col s3" name="type">
+			<%= Type %>
+		</div>
+
+		<div class="col s2" name="release">
+			<%= Release %>
+		</div>
+	</div>
+
+	<div class="row">
+		<hr>
+	</div>
+
+	<div class="row">
+		<div class="colnothing blue-grey lighten-4">
+			<i class="material-icons">fullscreen</i>
+		</div>
+
+		<div class="col s4">
+			<%= MySQL %>
+		</div>
+	</div>
+
+	<div class="row">
+		<hr>
+		<form method="POST" action="/savetoJson">
+			<button class="btn-grey waves-effect waves-light btn" type="submit">Save</button>
+		</form>
+	</div>
+</div>
+
+<script>
+	window.onload = function() {
+		var $toastContent = $('<span>Dashboard!</span>');
+  		Materialize.toast($toastContent, 2000);
+
+	}
+</script>

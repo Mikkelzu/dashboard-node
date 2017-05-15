@@ -1,0 +1,25 @@
+{
+  "name": "dashboard",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "chart.js": "^2.5.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "ip": "^1.1.5",
+    "diskinfo": "^0.0.3",
+    "pidusage": "^1.1.1",
+    "socket.io": "^1.7.3",
+    "tcp-ping": "^0.1.1",
+    "portfinder": "^1.0.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

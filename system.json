@@ -1,0 +1,19 @@
+{
+  "system": [
+    {
+      "uptime": 73,
+      "hostname": "Kali-Lenovo",
+      "ip": "192.168.1.77",
+      "model": "Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz",
+      "cores": "Total Cores: 4",
+      "speed": "2.29 GHz",
+      "arch": "x64",
+      "total": 8486,
+      "free": 4474,
+      "used": 4012,
+      "plat": "win32",
+      "type": "Windows_NT",
+      "rel": "10.0.15063"
+    }
+  ]
+}

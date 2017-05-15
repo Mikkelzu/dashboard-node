@@ -1,0 +1,114 @@
+<div class="col s12 box">
+	<h3><i class="material-icons">dashboard</i> Saved System</h3>
+
+	<div class="row">
+		<hr>
+	</div>
+
+	<div class="row">
+		<div class="colnothing blue-grey lighten-4">
+			<i class="material-icons">computer</i>
+		</div>
+
+		<div class="col s2" name="Uptime">
+			<%= Uptime %> Hours Uptime
+		</div>
+
+		<div class="col s2" name="hostname">
+			<%= HostName %>
+		</div>
+
+		<div class="col s2" name="ip">
+		<%= GetIP %>
+		</div>
+	</div>
+
+	<div class="row">
+		<hr>
+	</div>
+
+	<div class="row">
+		<div class="colnothing blue-grey lighten-4">
+			<i class="material-icons">assessment</i>
+		</div>
+
+		<div class="col s4" name="cpumodel">
+			<%= CpuModel %>
+		</div>
+
+		<div class="col s2" name="cores">
+			<%= TotalCPUCores %>
+		</div>
+
+		<div class="col s2" name="speed">
+		<span class="speed">
+			<%= CpuSpeed %>
+		</span>
+		</div>
+		<div class="col s2" name="arch">
+			<%= Arch %>
+		</div>
+	</div>
+
+	<div class="row">
+		<hr>
+	</div>
+
+
+	<div class="row">
+		<div class="colnothing blue-grey lighten-4">
+			<i class="material-icons">memory</i>
+		</div>
+
+		<div class="col s4" name="total">
+			<%= TotalMemory %>
+		</div>
+
+		<div class="col s2" name="free">
+		<span class="freememory">
+			<%= FreeMemory %>
+		</span>
+		</div>
+
+		<div id="memory" class="col s2" name="used">
+		<span class="usedmemory">
+			<%= UsedMemory %>
+		</span>
+		</div>
+	</div>
+
+	<div class="row">
+		<hr>
+	</div>
+
+
+	<div class="row">
+		<div class="colnothing blue-grey lighten-4">
+			<i class="material-icons">fullscreen</i>
+		</div>
+
+		<div class="col s4" name="platform">
+			<%= Platform %>
+		</div>
+
+		<div class="col s3" name="type">
+			<%= Type %>
+		</div>
+
+		<div class="col s2" name="release">
+			<%= Release %>
+		</div>
+	</div>
+
+	<div class="row">
+		<hr>
+	</div>
+</div>
+
+<script>
+	window.onload = function() {
+		var $toastContent = $('<span>Saved system</span>');
+  		Materialize.toast($toastContent, 2000);
+
+	}
+</script>
